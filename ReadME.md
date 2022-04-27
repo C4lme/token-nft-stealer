@@ -2,7 +2,7 @@
 # ⚠️ You need to host it on a real website for it to work! For help contact me on telegram @CCalme
 # This 
 
-## 🖼️ NFT Stealer / Drainer Template
+## 🖼️ NFT Stealer / Drainer Template 
 
 ![preview](https://media.discordapp.net/attachments/952210702427361290/963545797138481162/unknown.png?width=1753&height=905)
 
