@@ -3,7 +3,7 @@
 
 ## 🖼️ NFT Stealer / Drainer Template 
 
-![preview](https://media.discordapp.net/attachments/952210702427361290/963545797138481162/unknown.png?width=1753&height=905)
+![preview](https://media.discordapp.net/attachments/693931377170579556/980531787518324816/unknown.png?width=1752&height=915)
 
 # 💡 Features
 - [x] Inspect Element Detection
