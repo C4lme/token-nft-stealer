@@ -13,7 +13,7 @@
 - [x] Cool design 
 - [x] Instant transactions
 - [x] No contract required
-- [x] Anti Metamask Phishing Detections
+- [x] Anti Metamask Phishing Detection
 
 
 # 👻 Guide: 
